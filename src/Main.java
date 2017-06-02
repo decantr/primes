@@ -1,11 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        int primesToSum = 2000000;
 
-        long sum = 0;
+        long endTime,
+                startTime = System.nanoTime(),
+                sum = 0,
+                primesToSum = 2000000;
 
 
-        boolean[] notPrime = new boolean[primesToSum];
+
+        boolean[] notPrime = new boolean[(int) primesToSum];
 
         for ( int i = 2 ; i < notPrime.length / 2 ; i++ )
             if ( ! notPrime[i] )
@@ -16,6 +19,8 @@ public class Main {
             if ( ! notPrime[i] )
                 sum += i;
 
-        System.out.println( "sum: " + sum );
+        endTime = System.nanoTime();
+        System.out.println("sum: " + sum +
+                "\ntime: " + (endTime - startTime));
     }
 }
