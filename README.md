@@ -1,2 +1,0 @@
-# primes
-sum primes 
